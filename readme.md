@@ -7,6 +7,7 @@
 - **Audio Transcription**: Uses Google Gemini AI to transcribe voicemail audio files
 - **Call Summarization**: Generates professional call summaries with caller info, purpose, and action items
 - **Extension Mapping**: Routes voicemails to specific recipients based on extension numbers
+- **Department Identification**: Advanced version (`transcribe-departments.php`) automatically identifies departments (Sales, Service, Parts, or Other) for future routing
 - **Mobile-Friendly HTML**: Sends beautifully formatted HTML emails optimized for mobile devices
 - **Auto-Reply Detection**: Skips processing auto-reply and vacation messages
 - **WAV Attachment**: Includes original audio file as attachment in forwarded emails
@@ -17,6 +18,7 @@
 
 ## Requirements
 
+### Basic Version (`transcribe.php`)
 - PHP 7.4 or higher
 - cURL extension
 - Google Gemini API key
@@ -24,10 +26,35 @@
 - SiteGround shared hosting account
 - Email server with pipe functionality
 
+### Advanced Version (`transcribe-departments.php`)
+- All basic version requirements
+- **Gmail API credentials** (instead of standard email server)
+- **Google Groups integration** (recommended for department routing)
+
+## Recommended Hosting
+
+I recommend [SiteGround](https://www.siteground.com/index.htm?afcode=90b39fcebcfd879400ad1cc3ca717ea4) for hosting this voicemail processing system. SiteGround's shared hosting provides excellent PHP support, reliable email pipe functionality, and the performance needed for this script. If you find this script helpful, using the affiliate link would be greatly appreciated and helps support future development.
+
+## Available Versions
+
+### Basic Version (`transcribe.php`)
+- Standard voicemail transcription and routing
+- Extension-based and name-based recipient mapping
+- Perfect for most business setups
+
+### Advanced Version (`transcribe-departments.php`)
+- All features of the basic version
+- **Department Identification**: Automatically categorizes voicemails as Sales, Service, Parts, or Other
+- **Gmail API Integration**: Uses Gmail API instead of default PHP mailer to avoid Google Groups spam filtering issues
+- Future-ready for department-specific routing and workflows
+- Ideal for larger organizations with multiple departments
+
 ## Installation
 
 1. Clone or download this repository
-2. Copy `transcribe.php` (to your server, give it 755)
+2. Choose your version:
+   - For basic needs: Copy `transcribe.php` (to your server, give it 755)
+   - For department identification: Copy `transcribe-departments.php` (to your server, give it 755)
 3. Configure the script with your settings
 
 ## Configuration
